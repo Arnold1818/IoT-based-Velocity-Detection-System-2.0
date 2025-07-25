@@ -1,18 +1,19 @@
 # 🚅 IoT-Based Velocity Detection and Data Transmission System
 
-An affordable and scalable IoT solution to detect and transmit the velocity of moving objects such as trains or vehicles. This system leverages Arduino Uno, IR sensors, LCD display, and GSM module to prevent accidents in railway and traffic environments.
+An affordable and scalable IoT solution to detect and transmit the velocity of trains. This system leverages Arduino Uno, IR sensors, LCD display, and GSM module to prevent accidents in railway system.
 
 ---
 
 ## 📌 Problem Statement
 
-Traditional systems for monitoring vehicle or train speed are either manual or based on costly technologies like RADAR or LIDAR. These systems:
+Traditional systems for monitoring train speed are either manual or based on costly technologies like RADAR or LIDAR. These systems:
 - Lack real-time data transmission.
 - Are expensive to deploy widely.
 - Often exclude IoT integration.
 
 This project addresses these challenges by developing a **low-cost, IoT-enabled velocity detection and GSM-based data transmission system**.
 
+This project uses peer-to-peer network for data transmission without relying on cloud services or any centralized system.
 ---
 
 ## 🎯 Objectives
@@ -22,7 +23,6 @@ This project addresses these challenges by developing a **low-cost, IoT-enabled 
 - 📟 Provide real-time speed feedback via an LCD display.
 - 💰 Ensure cost-effectiveness using easily available components.
 - ✅ Validate with test objects to confirm performance and accuracy.
-- 🚦 Explore applications in railway safety, traffic control, and industrial monitoring.
 
 ---
 
@@ -52,15 +52,21 @@ This project addresses these challenges by developing a **low-cost, IoT-enabled 
 ## ⚙️ System Architecture
 
 ### 1. Sensor System (Trackside)
+![Sensor Block](Images/sensor_block.png)
 - IR sensors detect object movement and measure time.
 - Arduino Uno calculates speed and triggers data transmission.
 - GSM module sends data to the remote receiver system.
 - LCD provides immediate on-site velocity display.
+#### Sensor System Image
+![Sensor System](Images/sensor_system_image.jpg)
 
 ### 2. Train-End or Central System
+![Train System Block](Images/train_system_block.png)
 - GSM module receives velocity data.
 - Arduino Uno processes and sends data to buzzer and LCD.
-- Alerts are triggered in case of excessive speed or risk.
+- Alerts are triggered in case of excessive speed or possible collisions.
+#### Train System Image
+![Train System](Images/train_system_image.jpg)
 
 ---
 
@@ -104,16 +110,6 @@ This project addresses these challenges by developing a **low-cost, IoT-enabled 
 - 🛰️ GSM-based wireless data transmission.
 - 🔔 Buzzer alerts for over-speed detection.
 - 💸 Low-cost and easily deployable system.
-- 📊 Display for user feedback at sensor location.
-
----
-
-## 🧪 Applications
-
-- Railway collision prevention on single tracks.
-- Traffic speed monitoring and enforcement.
-- Industrial conveyor monitoring.
-- Robotics and moving machinery diagnostics.
 
 ---
 
